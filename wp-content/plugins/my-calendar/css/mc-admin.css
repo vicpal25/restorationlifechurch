@@ -1,0 +1,15 @@
+.mc_edit_links {
+    font-size: .9em;
+    margin: 5px -5px -5px;
+    padding: 2px;
+    clear: both;
+    border-top: 1px solid #ddd;
+}
+
+.mc_edit_links a {
+    display: inline !important;
+}
+
+.mini .mc_edit_links, .list .mc_edit_links {
+    margin-bottom: 5px;
+}

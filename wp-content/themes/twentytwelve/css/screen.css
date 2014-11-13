@@ -1,0 +1,51 @@
+/* Reset */
+
+.header {
+  background-color:#e22;
+}
+
+section {
+    min-height: 1000px;
+    position: relative;
+    width: 100% !important;
+    min-width: 1000px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+section:nth-of-type(1){background:whitesmoke;height:1200px;}
+section:nth-of-type(2){background:black;height:1600px;}
+
+#story-freext>div:nth-of-type(1) {
+    background: url(nike-bg.jpeg) 50% 0 no-repeat fixed;
+    margin: 0;
+    height: 1600px;
+    position:absolute;
+    width:100%;
+    top:0;left:0;
+}
+
+#story-freext>div:nth-of-type(2) {
+    background: url(nike.png) 50% 0 no-repeat fixed;
+    margin: 0;
+    height: 1600px;
+    position:absolute;
+    top:0px;left:100px;
+    width:100%;
+}
+
+#bottle>div:nth-of-type(1){
+    background: url(bottle.jpeg) 50% 0 no-repeat fixed;
+    margin: 0;
+    height: 1200px;
+    position:absolute;
+    top:0;left:0;
+    width:100%;
+}
+
+section h1{color:#4F9426;width:300px;font-size:65px;margin-bottom:14px;}
+section p{color:black;width:300px;}
+section article{position:absolute;top:240px;left:40px;width:300px;z-index:4;}
+
+.parallax-item{position:absolute;z-index:5;top:40px;left:400px;}

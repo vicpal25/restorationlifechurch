@@ -1,0 +1,262 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass";
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:900,300,700,400);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,500,700);
+
+$break-small: 320px;
+$break-large: 1024px;
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}
+
+html {margin-top: 0 !important;}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size:1rem;
+}
+
+.fullWidth {
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: initial;
+}
+
+.header {
+
+  .main-logo {
+
+      &:before {
+        width: 264px !important;
+        height: 59px;
+        display: inline-block;
+        content: "";
+        background-size: 345px;
+        background-repeat: no-repeat;
+        background-image: url("../restorationlifelogo.png");
+
+        @include respond-to(medium-screens) {
+          background-size: 260px;
+          margin-left:20px;
+        }
+
+      }
+  }
+
+
+}
+
+.top-bar {
+
+  background-color:#fff;
+  margin-bottom: 30px;
+
+  .title-area {
+    margin-right: 50px;
+  }
+
+  .dropdown {
+    background-color:#000;
+  }
+
+ a span::after {
+}
+
+  .toggle-topbar.menu-icon  {
+
+      right:-20px;
+
+      a {
+        color:#333;
+
+        span  {
+
+          &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 0;
+            top: 50%;
+            margin-top: -8px;
+            right: 15px;
+            box-shadow: 0 0px 0 1px #333, 0 7px 0 1px #333, 0 14px 0 1px #333;
+            width: 16px;
+          }
+
+        }
+      }
+
+  }
+
+   ul {
+
+     li {
+
+       a {
+
+          color: #333;
+          font-family: 'Roboto', sans-serif;
+          font-weight: 700;
+          font-size: 1.0rem;
+
+         &:hover {
+           color:#ec1b23 !important;
+         }
+
+       }
+     }
+   }
+
+  .top-bar-section {
+
+      ul  {
+
+        li {
+          background:transparent !important;
+        }
+
+        li:not(.has-form) a:not(.button) {
+          background:transparent !important;
+        }
+      }
+
+  }
+
+}
+
+.content  {
+  background-color:#ccc;
+}
+
+.fullWidth.verses {
+
+   background:url(../images/laskyline.jpg) 50% 0 no-repeat fixed;
+   color: white;
+   height: 500px;
+   margin: 0 auto;
+   padding: 0;
+   font-family: 'Ubuntu', sans-serif;
+
+    @include respond-to(handhelds) {
+      height:300px;
+      background:url(../images/laskyline.jpg) 20% 0 no-repeat fixed;
+    }
+
+    @include respond-to(medium-screens) {
+      height:300px;
+      background:url(../images/laskyline.jpg) 30% 0 no-repeat fixed;
+      background-position: 5% -27px !important;
+    }
+
+  .row {
+    color:#fff;
+    padding:20px 40px;
+    background-repeat: no-repeat;
+    background-size:cover;
+
+    p {
+      font-size:3rem;
+      line-height:60px;
+      background: -webkit-linear-gradient(#eee, #fff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @include respond-to(medium-screens) {
+       font-size:2rem;
+       line-height:38px;
+      }
+
+
+    }
+
+    ul {
+       position: relative;
+      top: 50%;
+      -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+      transform: translateY(50%);
+
+      @include respond-to(medium-screens) {
+        top: 5%;
+        -webkit-transform: translateY(5%);
+        -ms-transform: translateY(5%);
+        transform: translateY(5%);
+      }
+
+    }
+
+  }
+
+}
+
+.fullWidth.sky {
+    background:url(../images/heaven.jpg) 30% 0 no-repeat fixed;
+    color: white;
+    height: 500px;
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+#second{
+	background: url(../images/secondBG.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 1300px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0;
+}
+
+#second .bg{
+	background: url(../images/trainers.png) 50% 0 no-repeat fixed;
+	height: 1300px;
+	margin: 0 auto;
+	padding: 0;
+	position: absolute;
+	width: 900px;
+	z-index: 200;
+}
+
+#third{
+	background: url(../images/thirdBG.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 650px;
+	padding: 100px 0 0 0;
+}
+
+#fifth{
+	background: #ccc;
+	height: 400px;
+	margin: 0 auto;
+	padding: 40px 0 0 0;
+}
+
+.story{
+	margin: 0 auto;
+	min-width: 980px;
+	overflow: auto;
+	width: 980px;
+}
+
+.story .float-left, .story .float-right{
+	padding: 100px 0 0 0;
+	position: relative;
+	width: 350px;
+}
